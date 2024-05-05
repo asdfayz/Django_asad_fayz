@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+{% load digital_tags %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block slider %}
+{% endblock slider %}
+
+{% block main %}
+
+
+
+
+    <!-- /.nav -->
+
+
+
+        <!-- /.header -->
+
+
+
+
+
+
+<body>
+
+
+
+    <!-- /.nav -->
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+
+
+                    <!-- /.nav__catigories -->
+
+                    <div class="product__slider">
+                        <div class="product__slider-content">
+
+                            <div class="sliderLines">
+                                <div class="product__slider-item active">
+                                    <img src="{{ product.get_image_product }}" alt="banner"
+                                        class="product__slider-img">
+                                </div>
+
+                                <div class="product__slider-item">
+                                    <img src="{{ product.get_image_product }}" alt="banner"
+                                        class="product__slider-img">
+                                </div>
+
+                                <div class="product__slider-item">
+                                    <img src="{{ product.get_image_product }}" alt="banner"
+                                        class="product__slider-img">
+                                </div>
+
+                                <div class="product__slider-item">
+                                    <img src="./assets/images/product/product-main.png" alt="banner"
+                                        class="product__slider-img">
+                                </div>
+
+                                <div class="product__slider-item">
+                                    <img src="./assets/images/product/product-main.png" alt="banner"
+                                        class="product__slider-img">
+                                </div>
+
+                            </div>
+
+                            <div class="product__slider-panel">
+
+                                <ul class="product__slider-indicators">
+                                    <li>
+                                        <a href="#!" class="indicators__links active">
+                                            <img src="{{ product.get_image_product }}" alt="products">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="indicators__links">
+                                            <img src="{{ product.get_image_product }}" alt="products">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="indicators__links">
+                                            <img src="{{ product.get_image_product }}" alt="products">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="indicators__links">
+                                            <img src="{{ product.get_image_product }}" alt="products">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="indicators__links">
+                                            <img src="{{ product.get_image_product }}" alt="products">
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="product__slider-btns">
+                                    <button class="btn__next">
+                                        <img src="{% static 'digital/assets/icons/arrow-black.svg' %}" alt="arrow">
+                                    </button>
+                                    <button class="btn__prev">
+                                        <img src="{% static 'digital/assets/icons/arrow-black.svg' %}" alt="arrow">
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="product__slider-parameters">
+                            <div class="product__raiting">
+                                <div class="product__raiting-body">
+                                    <div class="product__raiting-active"></div>
+                                    <div class="product__raiting-items">
+                                        <input type="radio" name="raiting" value="1" class="product__raiting-links">
+                                        <input type="radio" name="raiting" value="2" class="product__raiting-links">
+                                        <input type="radio" name="raiting" value="3" class="product__raiting-links">
+                                        <input type="radio" name="raiting" value="4" class="product__raiting-links">
+                                        <input type="radio" name="raiting" value="5" class="product__raiting-links">
+                                    </div>
+                                </div>
+                                <div class="product__raiting-value">3.4</div>
+                            </div>
+                            <h1 class="product__title">{{ product.title }}</h1>
+                            <span class="product__categories">{{ product.category }}</span>
+                            <div class="product__links">
+                                <h2 class="product__links-price"> <span>{{ product.price }}</span> ₽</h2>
+                                <a href="#!" class="product__links-buy">Купить</a>
+                                <a href="#!" class="products__item-heart product__links-add">
+                                    <span>Добавить в желаемое</span></a>
+                            </div>
+                            <ul class="paremeters__list">
+                                <li class="paremetes__list-item">
+                                    <h3 class="paremeters__list-title">Цвет</h3>
+                                    <a href="#!" class="paremeters__list-btn">
+                                        <div class="paremeters__color"></div>
+                                        <img src="./assets/icons/arrow-black.svg" alt="arrow-down">
+                                    </a>
+                                    <div class="list__drop"></div>
+                                </li>
+                                <li class="paremetes__list-item">
+                                    <h3 class="paremeters__list-title">Количество</h3>
+                                    <a href="#!" class="paremeters__list-btn">
+                                        <div class="paremeters__count"><span>1</span></div>
+                                        <img src="./assets/icons/arrow-black.svg" alt="arrow-down">
+                                    </a>
+                                    <div class="list__drop"></div>
+
+                                </li>
+                                <li class="paremetes__list-item">
+                                    <h3 class="paremeters__list-title">Размер (Д × Ш × В)</h3>
+                                    <a href="#!" class="paremeters__list-btn">
+                                        <div class="paremeters__size">218 СМ × 95 СМ × 90 СМ</div>
+                                        <img src="./assets/icons/arrow-black.svg" alt="arrow-down">
+                                    </a>
+                                    <div class="list__drop"></div>
+                                </li>
+                            </ul>
+
+                            <p class="product__descr">
+                                <span class="product__descr-title">Описание</span>
+                                Лаконичные линии и простые формы, безупречный стиль и индивидуальность – все это диван
+                                «Динс». Сдержанный скандинавский дизайн украсит любую современную обстановку.
+                                Элегантность, комфорт и функциональность, собранные воедино – «Динс» просто создан для
+                                размеренного отдыха в кругу семьи или компании друзей!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /.product__slider -->
+
+
+                </div>
+                <!-- /.header__content -->
+            </div>
+            <!-- /.container -->
+        </header>
+        <!-- /.header -->
+
+
+         <main class="main">
+            <div class="container">
+                <section class="products">
+                    <h2 class="products__title">Хиты продаж</h2>
+                    <div class="products__content">
+
+                        <!-- /.products__item -->
+                        <div class="products__item ">
+                            <a href="#!" class="products__item-heart active">
+
+                            </a>
+
+                            <a href="./product.html"> <img src="{{ product.get_image_product }}" alt=""
+                                    class="products__item-img"></a>
+                            <div class="products__item-text">
+                                <h3 class="products__item-title">{{ product.title }}</h3>
+                                <div class="products__item-desrc">{{ product.category }}</div>
+                                <div class="products__item-price">{% get_normal_price  product.price %} руб</div>
+                            </div>
+                            <!-- /.products__item-text -->
+                            <div class="products__item-options products__options">
+                                <h4 class="products__options-title">Размеры</h4>
+                                <ul class="products__options-list options__list">
+                                    <li class="options__list-item">
+                                        <p class="options__list-text">
+                                            ШИРИНА
+                                        </p>
+                                        <span class="size">{{ product.length }}</span>
+                                    </li>
+                                    <li class="options__list-item">
+                                        <p class="options__list-text">
+                                            ГЛУБИНА
+                                        </p>
+                                        <span class="size">{{ product.width }}</span>
+                                    </li>
+                                    <li class="options__list-item">
+                                        <p class="options__list-text">
+                                            ВЫСОТА
+                                        </p>
+                                        <span class="size">{{ product.height }}</span>
+                                    </li>
+                                </ul>
+                                <a href="./product.html" class="options__btn btn">Добавить в корзину</a>
+                            </div>
+                            <!-- /.products__options -->
+                        </div>
+
+
+
+                    </div>
+                    <!-- /.products__content -->
+                </section>
+                <!-- /.products -->
+            </div>
+            <!-- /.container -->
+        </main>
+        <!-- /.main -->
+
+
+        <!-- /.footer -->
+    </div>
+    <!-- /.wrapper -->
+
+
+
+    <!-- Js - скрипты -->
+
+
+
+        <!-- /.main -->
+
+
+        <!-- /.footer -->
+
+    <!-- /.wrapper -->
+
+    <!-- Js - скрипты -->
+</body>
+
+{% endblock main %}
