@@ -1,0 +1,11 @@
+
+{%  for p in product.parameters.all %}
+
+
+
+<p class="product__descr">
+    <span class="product__descr-title">Описание</span>
+    {{ p.parameter_info }}
+</p>
+
+{% endfor %}

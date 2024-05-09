@@ -66,6 +66,15 @@ class Product(models.Model):
         else:
             return '-'
 
+    def get_image_product2(self):
+        if self.images:
+            try:
+                return self.images.second().image.url
+            except:
+                return '-'
+        else:
+            return '-'
+
     def __str__(self):
         return self.title
 

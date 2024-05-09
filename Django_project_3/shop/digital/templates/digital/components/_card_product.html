@@ -1,6 +1,6 @@
 {% load digital_tags %}
 <div class="products__item">
-    <a href="" class="products__item-heart">
+    <a href="{% url 'save_favorite' product.slug %}" class="products__item-heart">
 
     </a>
 
@@ -35,7 +35,7 @@
                 <span class="size">{{ product.height }}</span>
             </li>
         </ul>
-        <a href="./product.html" class="options__btn btn">Добавить в корзину</a>
+        <a href="#" class="options__btn btn">Добавить в корзину</a>
     </div>
     <!-- /.products__options -->
 </div>

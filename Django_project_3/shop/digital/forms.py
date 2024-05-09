@@ -29,10 +29,6 @@ class LoginForm(AuthenticationForm):
 
 
 class RegisterForm(UserCreationForm):
-    username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
-        'class': 'form-control',
-        'placeholder': 'Ваш логин'
-    }))
 
     first_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
         'class': 'form-control',
@@ -49,6 +45,12 @@ class RegisterForm(UserCreationForm):
         'placeholder': 'Ваша почта'
     }))
 
+    phone_number = forms.IntegerField(widget=forms.EmailInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Ваш номер телефона'
+    }))
+
+
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control',
         'placeholder': 'Пароль'
@@ -61,7 +63,7 @@ class RegisterForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
+        fields = ('first_name', 'last_name', 'email', 'phone_number',  'password1', 'password2')
 
 
 # Форма покупателя

@@ -8,8 +8,7 @@ urlpatterns = [
     path('login/', user_login_view, name='login'),
     path('logout/', user_logout_view, name='logout'),
     path('register/', register_view, name='register'),
-    path('product_detail/<slug:slug>/', ProductDetail.as_view(), name='product_detail'),
-    path('product_color/<str:model_product>/<str:color_code>/', product_by_color, name='product_color'),
+
     path('save_favorite/<slug:slug>/', save_favorite_product, name='save_favorite'),
     path('favorite/', FavoriteProductView.as_view(), name='favorite'),
     path('to_cart/<int:pk>/<str:action>/', to_cart_view, name='to_cart'),
