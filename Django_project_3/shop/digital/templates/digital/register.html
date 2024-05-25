@@ -2,7 +2,7 @@
 
 
 {% block title %}
-{{ title }}
+    {{ title }}
 {% endblock title %}
 
 {% block slider %}
@@ -18,7 +18,7 @@
 
 
 
-<body>
+    <body>
 
 
     <!-- /.nav -->
@@ -26,7 +26,6 @@
     <div class="wrapper">
 
         <!-- /.header -->
-
 
 
         <main class="main">
@@ -76,28 +75,69 @@
 
                         </form>
 
-                        <form class="registeration__form">
-                            <h2 class="registeration__title products__title">Авторизация</h2>
-                            <div class="registeration__form-grid">
+                        <style>
+                            .registeration__form {
+                                max-width: 400px;
+                                margin: 0 auto;
+                                padding: 20px;
+                            }
 
-                                <div class="input__title">
-                                    <h2>E-mail</h2>
-                                    <input type="email" class="contact__section-input">
-                                </div>
+                            .registeration__form-grid {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                            }
 
+                            .input__title {
+                                display: flex;
+                                flex-direction: column;
+                            }
 
-                                <div class="input__title">
-                                    <h2> Пароль</h2>
-                                    <input type="password" class="contact__section-input">
-                                </div>
+                            .btn {
+                                padding: 10px;
+                                background-color: #007bff;
+                                color: white;
+                                border: none;
+                                cursor: pointer;
+                            }
 
-                            </div>
+                            .btn._revers {
+                                background-color: #6c757d;
+                            }
 
-                            <button class="btn registeration__btn-login _auth">Войти</button>
-
+                            .btn._auth {
+                                background-color: #28a745;
+                            }
+                        </style>
+                        </head>
+                        <body>
+                        <form onsubmit="login(); return false;">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                            <br>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            <br>
+                            <button type="submit">Login</button>
                         </form>
 
+                        <script>
+                            function login() {
+                                // Get data from the form
+                                var username = document.getElementById('username').value;
+                                var password = document.getElementById('password').value;
 
+                                // Check user credentials (replace this with real authentication)
+                                if (username === "Polat" && password === "123") {
+                                    // Redirect to index.html if credentials are correct
+                                    window.location.href = 'index.html';
+                                } else {
+                                    // Show alert if credentials are incorrect
+                                    alert("Email yoki parol noto'g'ri. Iltimos, qaytadan urinib ko'ring.");
+                                }
+                            }
+                        </script>
+                        </body>
                     </div>
                 </div>
             </div>
@@ -110,9 +150,8 @@
     <!-- /.wrapper -->
 
 
-
     <!-- Js - скрипты -->
-</body>
+    </body>
 
 
 

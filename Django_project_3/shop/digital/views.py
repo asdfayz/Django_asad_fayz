@@ -95,13 +95,12 @@ def user_logout_view(request):
 # Вьюшка для страницы регистрации
 def register_view(request):
     if request.user.is_authenticated:
-        return redirect('index')
+        return redirect('profile')
     else:
         if request.method == 'POST':
             form = RegisterForm(data=request.POST)
             if form.is_valid():
                 user = form.save()
-                messages.success(request, 'Регистрация прошла успешно. Авторизуйтесь')
                 return redirect('login')
             else:
                 for field in form.errors:
